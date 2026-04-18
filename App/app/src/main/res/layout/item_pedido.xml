@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/viewEstadoColor"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNombreCliente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Nombre Cliente"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvNumeroPedido"
+            app:layout_constraintStart_toEndOf="@id/viewEstadoColor"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNumeroPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="#123456"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNombreCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvNombreCliente" />
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Dirección de entrega"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/tvNumeroPedido"
+            app:layout_constraintStart_toStartOf="@id/tvNombreCliente"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreCliente" />
+
+        <LinearLayout
+            android:id="@+id/layoutBotones"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tvNumeroPedido"
+            app:layout_constraintStart_toStartOf="@id/tvNombreCliente"
+            app:layout_constraintTop_toBottomOf="@id/tvDireccion">
+
+            <Button
+                android:id="@+id/btnVerMapa"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:text="MAPA"
+                android:textSize="9sp"
+                android:padding="0dp"/>
+
+            <Button
+                android:id="@+id/btnEntregar"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1.2"
+                android:layout_marginHorizontal="2dp"
+                android:backgroundTint="#4CAF50"
+                android:text="ENTREGAR"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:padding="0dp"/>
+
+            <Button
+                android:id="@+id/btnReportar"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:backgroundTint="#F44336"
+                android:text="REPORTAR"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:padding="0dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
